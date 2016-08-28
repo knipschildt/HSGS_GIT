@@ -1,0 +1,300 @@
+﻿body {
+	padding-top: 50px;
+	padding-bottom: 20px;
+	background-color: #e1e5cf;
+}
+
+
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+	white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+/*input,
+select,
+textarea {
+	max-width: 280px;
+}*/
+
+
+.panel-heading,
+.panel-footer {
+	border-color: gray;
+background-color: #fffff2 !important;
+
+}
+
+.well {
+	border-color: gray;
+}
+
+/* Pic overlay */
+@charset "utf-8";
+/* CSS Document */
+
+#main {
+width:100%;
+height:100%;
+border-width: 1px;
+z-index:5;	
+}
+
+
+
+#main_overlay:hover {	
+	top:70%;
+}
+
+#main_overlay_top_most {
+	cursor: pointer;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	z-index: 2;	
+	overflow: hidden;
+}
+
+#main_overlay_top_text {
+	color: #e1e5cf;
+	padding-left: 7px;
+	overflow: hidden;
+}
+
+#main_overlay_top_under_text {
+	color: #e1e5cf;
+	padding: 2px 10px 10px 10px;
+	font-size:12px;
+}
+
+#main_overlay {
+	position: absolute;
+	top:85%;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.7);
+	z-index:1;
+	overflow: hidden;
+	-webkit-transition: top 2s; /* For Safari 3.1 to 6.0 */
+	transition: top 2s;
+   }
+
+
+/* --------------------------------------
+   Carousel
+   -------------------------------------- */
+
+#myCarousel {
+	margin-top: 0px;
+	background-color: #000000;
+}
+
+.carousel-caption {
+		font-size: 16px;
+	}
+	
+	.carousel-caption h4 {
+		font-size: 22px;
+	}
+
+#myCarousel .item { height: 280px; }
+
+	#slide1 {
+		background: url('../Content/images/1_768x280.jpg') top center no-repeat;
+	}
+	
+	#slide2 {
+		background: url('../Content/images/2_768x280.jpg') top center no-repeat;
+	}
+	
+	#slide3 {
+		background: url('../Content/images/3_768x280.jpg') top center no-repeat;
+	}
+
+	#slide4 {
+		background: url('../Content/images/4_768x280.jpg') top center no-repeat;
+	}
+
+	#slide5 {
+		background: url('../Content/images/5_768x280.jpg') top center no-repeat;
+	}
+
+	#slide6 {
+		background: url('../Content/images/6_768x280.jpg') top center no-repeat;
+	}
+
+hr.style1 {
+	border-top: 1px solid #8c8b8b;
+	border-bottom: 1px solid #fff;
+}
+hr.style1:after {
+	content: '';
+	display: block;
+	margin-top: 2px;
+	border-top: 1px solid #8c8b8b;
+	border-bottom: 1px solid #fff;
+}
+
+
+/* --------------------------------------
+   Media Queries
+   -------------------------------------- */
+
+/* Portrait & landscape phone */
+@media (max-width: 470px) {
+
+	#myCarousel .item { height: 220px; }
+
+	#slide1 {
+		background: url('../Content/images/1_480x220.jpg') top center no-repeat;
+	}
+	
+	#slide2 {
+		background: url('../Content/images/2_480x220.jpg') top center no-repeat;
+	}
+	
+	#slide3 {
+		background: url('../Content/images/3_480x220.jpg') top center no-repeat;
+	}
+
+	#slide4 {
+		background: url('../Content/images/4_480x220.jpg') top center no-repeat;
+	}
+
+	#slide5 {
+		background: url('../Content/images/5_480x220.jpg') top center no-repeat;
+	}
+
+	#slide6 {
+		background: url('../Content/images/6_480x220.jpg') top center no-repeat;
+	}
+   .carousel-caption {
+		font-size: 12px;
+	}
+	
+	.carousel-caption h4 {
+		font-size: 18px;
+	}
+
+   #main_overlay {
+	top:70%;
+   }
+   #main_overlay:hover {	
+	top:20%;
+}
+	.rating{  
+		top:-15px;
+   font-size:22px;
+   }
+	
+}
+
+/* Landscape phone to portrait tablet */
+@media (min-width: 768px) {
+	
+	#myCarousel .item { height: 280px; }
+	
+	#slide1 {
+		background: url('../Content/images/1_768x280.jpg') top center no-repeat;
+	}
+	
+	#slide2 {
+		background: url('../Content/images/2_768x280.jpg') top center no-repeat;
+	}
+	
+	#slide3 {
+		background: url('../Content/images/3_768x280.jpg') top center no-repeat;
+	}
+
+	#slide4 {
+		background: url('../Content/images/4_768x280.jpg') top center no-repeat;
+	}
+
+	#slide5 {
+		background: url('../Content/images/5_768x280.jpg') top center no-repeat;
+	}
+
+	#slide6 {
+		background: url('../Content/images/6_768x280.jpg') top center no-repeat;
+	}
+	
+	.carousel-caption {
+		font-size: 16px;
+	}
+	
+	.carousel-caption h4 {
+		font-size: 22px;
+	}	
+	  .rating{ 
+		  top:-15px; 
+   font-size:26px;
+   }
+}
+
+/* Large desktop */
+@media (min-width: 1200px) {
+
+	#myCarousel .item { height: 380px; }
+	
+	#slide1 {
+		background: url('../Content/images/1_1200x380.jpg') top center no-repeat;
+	}
+	
+	#slide2 {
+		background: url('../Content/images/2_1200x380.jpg') top center no-repeat;
+	}
+	
+	#slide3 {
+		background: url('../Content/images/3_1200x380.jpg') top center no-repeat;
+	}
+
+	#slide4 {
+		background: url('../Content/images/4_1200x380.jpg') top center no-repeat;
+	}
+
+	#slide5 {
+		background: url('../Content/images/5_1200x380.jpg') top center no-repeat;
+	}
+
+	#slide6 {
+		background: url('../Content/images/6_1200x380.jpg') top center no-repeat;
+	}
+
+	.carousel-caption {
+		font-size: 22px;
+	}
+	
+	.carousel-caption h4 {
+		font-size: 30px;
+	}
+	.rating{ 
+		top:-15px; 
+   font-size:26px;
+   }
+
+}
+
+ .rating span:before {
+   content: "\2606";
+   }
+   .rating .blank:before {
+   content: "\2605";
+   }
+   
+   #preivew{
+   font-size: 14px;
+   }
+	.rating{  
+   top:-15px;
+   }
+
+
