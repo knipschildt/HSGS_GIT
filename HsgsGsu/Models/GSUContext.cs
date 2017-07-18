@@ -11,6 +11,8 @@ namespace HsgsGsu.Models
 
     {
         public DbSet<Sjantpic> Sjantpics { get; set; }
-
+        public DbSet<QuizListe> QuizLister { get; set; }
+        public DbSet<QuizOrderList> QuizOrderLister { get; set; }
+        public DbSet<User> Users { get; set; }
     }
 }

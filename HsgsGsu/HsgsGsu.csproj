@@ -129,12 +129,16 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\QuizListesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\GSUContext.cs" />
+    <Compile Include="Models\QuizListe.cs" />
+    <Compile Include="Models\QuizOrderList.cs" />
     <Compile Include="Models\Sjantpic.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -167,6 +171,7 @@
     <Content Include="Content\images_chat\4.jpg" />
     <Content Include="Content\images_chat\5.jpg" />
     <Content Include="Content\images_chat\6.jpg" />
+    <Content Include="Content\images_quiz\bg_quiz.jpg" />
     <Content Include="Content\video\1I.mp4" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -190,7 +195,9 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -205,6 +212,11 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\_Indsaet_Karusel.cshtml" />
+    <Content Include="Views\QuizListes\Create.cshtml" />
+    <Content Include="Views\QuizListes\Delete.cshtml" />
+    <Content Include="Views\QuizListes\Details.cshtml" />
+    <Content Include="Views\QuizListes\Edit.cshtml" />
+    <Content Include="Views\QuizListes\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

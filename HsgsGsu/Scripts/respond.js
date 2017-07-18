@@ -338,3 +338,7 @@ window.matchMedia = window.matchMedia || (function(doc, undefined){
 		win.attachEvent( "onresize", callMedia );
 	}
 })(this);
+
+$(document).ready(function () {
+    $('.carousel').carousel('cycle');
+});

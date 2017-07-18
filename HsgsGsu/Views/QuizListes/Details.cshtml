@@ -1,0 +1,104 @@
+﻿@model HsgsGsu.Models.QuizListe
+
+@{
+    ViewBag.Title = "Details";
+}
+<div class="container" style="padding-left:5px; padding-right:5px;">
+    <h3>@Html.DisplayFor(model => model.MobilTitel)</h3>
+    <hr />
+    <div class="row">
+        <div class="col-md-6" style="padding-left:0px; padding-right:0px;">
+            <div class="well" style="padding-left:7px; padding-right:7px;">
+
+                <div id="main">
+                    <div id="main_overlay_top_most">
+                        <img src="~/Content/images_quiz/@Model.Filnavn" alt="@Model.WebTitel" title="@Model.MobilTitel" class="btn-block" />
+                        <div id="main_overlay">
+                            <div id="main_overlay_top_text">FØRDAG @Model.Førdag</div>
+                            <div id="main_overlay_top_under_text">LEK @Model.Lektion</div>
+                        </div>
+                    </div>
+                </div>
+                <p>@Model.Beskrivelse</p>
+                <p><a class="btn btn-success btn-block" href="http://www.kvistgaarden.com/index.php/da/">Start prøven &raquo;</a></p>
+
+
+            </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="well" style="padding-left:7px; padding-right:7px;">
+                        <h5>Ranking score</h5>
+                        -
+                        -
+                        -
+                        -
+
+                    </div>
+                </div>
+            </div>
+</div>
+
+
+    @*<dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MobilTitel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MobilTitel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Beskrivelse)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Beskrivelse)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Kategori)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Kategori)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Førdag)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Førdag)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Lektion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Lektion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Oprettet)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Oprettet)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AntalGange)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AntalGange)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.QuizId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>*@
