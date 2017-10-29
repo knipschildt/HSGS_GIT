@@ -1,4 +1,4 @@
-﻿@model IEnumerable <HsgsGsu.Models.Sjantpic>
+﻿@model IEnumerable<HsgsGsu.Models.Sjantpic>
 @{
 
     ViewBag.Title = "Forside HSGS";
@@ -60,7 +60,7 @@
                             <span style="padding-left:7px; font-size:medium; font-weight:bold; color:silver">"S´JANT" Chatten.</span>
                         </div>
                         @foreach (var item in Model)
-    {                    <div class="panel panel-default">
+                        {                    <div class="panel panel-default">
                             <div class="panel-heading">@Html.DisplayFor(modelItem => item.Overskrift)</div>
                             <div id="main">
                                 <div id="main_overlay_top_most">
@@ -73,7 +73,7 @@
                             </div>
                             <div class="panel-footer"><span class="glyphicon glyphicon-thumbs-up" style="font-size:1.3em;" aria-hidden="true"></span>&nbsp;&nbsp;<span class="glyphicon glyphicon-comment" style="font-size:1.3em;" aria-hidden="true"></span></div>
                         </div>
-    }
+                        }
                     </div>
                 </div>
 
@@ -108,6 +108,4 @@
             </div>
         </div>
     </div>
-    </div>
-
-
+</div>

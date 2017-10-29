@@ -1,0 +1,58 @@
+﻿@model HsgsGsu.Models.User
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>User</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MaId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fNavn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fNavn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.eNavn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.eNavn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Deling)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Deling)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Hold)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hold)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Web;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace HsgsGsu.Models
 {
@@ -13,7 +9,10 @@ namespace HsgsGsu.Models
         public int KursusID { get; set; }
         public int MaID { get; set; }
         public bool Passed { get; set; }
-
+        public int Score { get; set; }
+        public string Navn { get; set; }
+        public string DEL { get; set; }
+        public string HOLD { get; set; }
 
         public QuizOrderList()
         {

@@ -10,13 +10,10 @@
         <div class="col-md-6" style="padding-left:0px; padding-right:0px;">
             <div class="well" style="padding-left:7px; padding-right:7px;">
                 @foreach (var item in Model)
-            {
-                   
-                        <a href="@Url.Action("Details", "QuizListes",new { id = item.QuizId })" )" class="btn btn-success btn-block" style="text-align:left; padding-left:6px;margin-bottom:15px;" role="button">
-                           @* <span class="pull-left"></span>*@
-                            Lek. @Html.DisplayFor(modelItem => item.Lektion) @Html.DisplayFor(modelItem => item.MobilTitel)<span class="badge pull-right hidden-xs" style="margin-right:5px;">@Html.DisplayFor(modelItem => item.AntalGange)</span>
-                        </a>
-                   
+                {
+                    <a href="@Url.Action("Details", "QuizListes",new { id = item.QuizId })" )" class="btn btn-success btn-block" style="text-align:left; padding-left:6px;margin-bottom:15px;" role="button">
+                        Lek. @Html.DisplayFor(modelItem => item.Lektion) @Html.DisplayFor(modelItem => item.MobilTitel)<span class="badge pull-right hidden-xs" style="margin-right:5px;">@Html.DisplayFor(modelItem => item.AntalGange)</span>
+                    </a>
                 }
             </div>
         </div>

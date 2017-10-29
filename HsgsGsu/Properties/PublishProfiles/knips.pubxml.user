@@ -1,0 +1,434 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAyBThRLuVL0a4td7kITJF5QAAAAACAAAAAAAQZgAAAAEAACAAAAAyOLD9FVxrgIgu1pDE/m1HaPWOr3Kpum988dm2wggy+gAAAAAOgAAAAAIAACAAAAD4BLoPJaFuZwIrREfE4YpvQGjlpHHaAignHaYgOBj3RyAAAACHBwtWhJOnVkUkyVlfGRj+otTh73D7EardaHGQ1AqwOUAAAACB9Uq0ktMX9MLWEwkrOorpqY44RHBKnAeOPoa9kluYqFdze7f91gMhvTudEye2rFQVFkeZALOxqs/URBP/kriK</EncryptedPassword>
+    <_PublishTargetUrl>ftp://hkic.dk/public_html/</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="App_Data/hsgs.mdf">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="App_Data/hsgs_log.ldf">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>02/22/2013 07:43:40</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>03/02/2015 09:32:26</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>03/02/2015 09:32:26</publishTime>
+    </File>
+    <File Include="bin/HSGS.dll">
+      <publishTime>11/08/2016 19:36:38</publishTime>
+    </File>
+    <File Include="bin/HsgsGsu.dll">
+      <publishTime>10/29/2017 16:18:45</publishTime>
+    </File>
+    <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
+      <publishTime>06/15/2015 02:06:24</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>04/23/2012 15:23:58</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>08/03/2014 20:33:56</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
+      <publishTime>06/18/2015 20:19:44</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Collections.Immutable.dll">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Reflection.Metadata.dll">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe.config">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>01/28/2015 03:04:30</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>01/28/2015 03:02:18</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>02/11/2014 14:26:04</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>01/28/2015 03:02:32</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>01/28/2015 03:04:30</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>01/28/2015 03:04:30</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>01/28/2015 03:04:30</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>09/10/2013 17:28:38</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css">
+      <publishTime>08/26/2016 19:13:49</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css">
+      <publishTime>08/26/2016 19:13:49</publishTime>
+    </File>
+    <File Include="Content/images/1I.PNG">
+      <publishTime>08/07/2016 22:03:56</publishTime>
+    </File>
+    <File Include="Content/images/1_1200x380.jpg">
+      <publishTime>08/07/2016 22:03:56</publishTime>
+    </File>
+    <File Include="Content/images/1_480x220.jpg">
+      <publishTime>08/07/2016 22:03:56</publishTime>
+    </File>
+    <File Include="Content/images/1_768x280.jpg">
+      <publishTime>08/07/2016 22:03:56</publishTime>
+    </File>
+    <File Include="Content/images/2_1200x380.jpg">
+      <publishTime>08/07/2016 22:03:56</publishTime>
+    </File>
+    <File Include="Content/images/2_480x220.jpg">
+      <publishTime>08/07/2016 22:03:56</publishTime>
+    </File>
+    <File Include="Content/images/2_768x280.jpg">
+      <publishTime>08/07/2016 22:03:57</publishTime>
+    </File>
+    <File Include="Content/images/2_800x330.jpg">
+      <publishTime>08/07/2016 22:03:57</publishTime>
+    </File>
+    <File Include="Content/images/3_1200x380.jpg">
+      <publishTime>08/07/2016 22:03:57</publishTime>
+    </File>
+    <File Include="Content/images/3_480x220.jpg">
+      <publishTime>08/07/2016 22:03:57</publishTime>
+    </File>
+    <File Include="Content/images/3_768x280.jpg">
+      <publishTime>08/07/2016 22:03:57</publishTime>
+    </File>
+    <File Include="Content/images/4_1200x380.jpg">
+      <publishTime>08/07/2016 22:03:57</publishTime>
+    </File>
+    <File Include="Content/images/4_480x220.jpg">
+      <publishTime>08/07/2016 22:03:57</publishTime>
+    </File>
+    <File Include="Content/images/4_768x280.jpg">
+      <publishTime>08/07/2016 22:03:57</publishTime>
+    </File>
+    <File Include="Content/images/5_1200x380.jpg">
+      <publishTime>08/07/2016 22:03:57</publishTime>
+    </File>
+    <File Include="Content/images/5_480x220.jpg">
+      <publishTime>08/07/2016 22:03:57</publishTime>
+    </File>
+    <File Include="Content/images/5_768x280.jpg">
+      <publishTime>08/07/2016 22:03:57</publishTime>
+    </File>
+    <File Include="Content/images/6_1200x380.jpg">
+      <publishTime>08/07/2016 22:03:57</publishTime>
+    </File>
+    <File Include="Content/images/6_480x220.jpg">
+      <publishTime>08/07/2016 22:03:57</publishTime>
+    </File>
+    <File Include="Content/images/6_768x280.jpg">
+      <publishTime>08/07/2016 22:03:57</publishTime>
+    </File>
+    <File Include="Content/images/HSGS_DK.gif">
+      <publishTime>08/07/2016 22:03:57</publishTime>
+    </File>
+    <File Include="Content/images_chat/1.jpg">
+      <publishTime>08/10/2016 19:54:49</publishTime>
+    </File>
+    <File Include="Content/images_chat/2.jpg">
+      <publishTime>08/10/2016 19:51:49</publishTime>
+    </File>
+    <File Include="Content/images_chat/3.jpg">
+      <publishTime>08/10/2016 19:54:07</publishTime>
+    </File>
+    <File Include="Content/images_chat/4.jpg">
+      <publishTime>08/10/2016 19:44:22</publishTime>
+    </File>
+    <File Include="Content/images_chat/5.jpg">
+      <publishTime>08/10/2016 19:53:16</publishTime>
+    </File>
+    <File Include="Content/images_chat/6.jpg">
+      <publishTime>08/10/2016 19:52:56</publishTime>
+    </File>
+    <File Include="Content/images_quiz/2.JPG">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Content/images_quiz/bg_quiz.jpg">
+      <publishTime>07/18/2017 11:59:51</publishTime>
+    </File>
+    <File Include="Content/Site.css">
+      <publishTime>07/21/2017 07:16:19</publishTime>
+    </File>
+    <File Include="Content/video/1I.mp4">
+      <publishTime>08/07/2016 22:04:02</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>07/18/2017 15:47:41</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.eot">
+      <publishTime>08/26/2016 19:13:49</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.svg">
+      <publishTime>08/26/2016 19:13:49</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>08/26/2016 19:13:49</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff">
+      <publishTime>08/26/2016 19:13:49</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>08/26/2016 19:13:47</publishTime>
+    </File>
+    <File Include="images/1I.PNG">
+      <publishTime>07/08/2016 22:03:56</publishTime>
+    </File>
+    <File Include="images/1_1200x380.jpg">
+      <publishTime>07/08/2016 22:03:56</publishTime>
+    </File>
+    <File Include="images/1_480x220.jpg">
+      <publishTime>07/08/2016 22:03:56</publishTime>
+    </File>
+    <File Include="images/1_768x280.jpg">
+      <publishTime>07/08/2016 22:03:56</publishTime>
+    </File>
+    <File Include="images/2_1200x380.jpg">
+      <publishTime>07/08/2016 22:03:56</publishTime>
+    </File>
+    <File Include="images/2_480x220.jpg">
+      <publishTime>07/08/2016 22:03:56</publishTime>
+    </File>
+    <File Include="images/2_768x280.jpg">
+      <publishTime>07/08/2016 22:03:57</publishTime>
+    </File>
+    <File Include="images/2_800x330.jpg">
+      <publishTime>07/08/2016 22:03:57</publishTime>
+    </File>
+    <File Include="images/3_1200x380.jpg">
+      <publishTime>07/08/2016 22:03:57</publishTime>
+    </File>
+    <File Include="images/3_480x220.jpg">
+      <publishTime>07/08/2016 22:03:57</publishTime>
+    </File>
+    <File Include="images/3_768x280.jpg">
+      <publishTime>07/08/2016 22:03:57</publishTime>
+    </File>
+    <File Include="images/4_1200x380.jpg">
+      <publishTime>07/08/2016 22:03:57</publishTime>
+    </File>
+    <File Include="images/4_480x220.jpg">
+      <publishTime>07/08/2016 22:03:57</publishTime>
+    </File>
+    <File Include="images/4_768x280.jpg">
+      <publishTime>07/08/2016 22:03:57</publishTime>
+    </File>
+    <File Include="images/5_1200x380.jpg">
+      <publishTime>07/08/2016 22:03:57</publishTime>
+    </File>
+    <File Include="images/5_480x220.jpg">
+      <publishTime>07/08/2016 22:03:57</publishTime>
+    </File>
+    <File Include="images/5_768x280.jpg">
+      <publishTime>07/08/2016 22:03:57</publishTime>
+    </File>
+    <File Include="images/6_1200x380.jpg">
+      <publishTime>07/08/2016 22:03:57</publishTime>
+    </File>
+    <File Include="images/6_480x220.jpg">
+      <publishTime>07/08/2016 22:03:57</publishTime>
+    </File>
+    <File Include="images/6_768x280.jpg">
+      <publishTime>07/08/2016 22:03:57</publishTime>
+    </File>
+    <File Include="images/HSGS_DK.gif">
+      <publishTime>07/08/2016 22:03:57</publishTime>
+    </File>
+    <File Include="images_chat/1.jpg">
+      <publishTime>10/08/2016 19:54:49</publishTime>
+    </File>
+    <File Include="images_chat/2.jpg">
+      <publishTime>10/08/2016 19:51:49</publishTime>
+    </File>
+    <File Include="images_chat/3.jpg">
+      <publishTime>10/08/2016 19:54:07</publishTime>
+    </File>
+    <File Include="images_chat/4.jpg">
+      <publishTime>10/08/2016 19:44:22</publishTime>
+    </File>
+    <File Include="images_chat/5.jpg">
+      <publishTime>10/08/2016 19:53:16</publishTime>
+    </File>
+    <File Include="images_chat/6.jpg">
+      <publishTime>10/08/2016 19:52:56</publishTime>
+    </File>
+    <File Include="Models/HSGS.edmx.diagram">
+      <publishTime>11/08/2016 19:04:49</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>08/26/2016 19:21:10</publishTime>
+    </File>
+    <File Include="Properties/PublishProfiles/knips.pubxml.user">
+      <publishTime>10/29/2017 16:18:41</publishTime>
+    </File>
+    <File Include="Properties/PublishProfiles/knipschildt_hkic_dk.pubxml.user">
+      <publishTime>08/07/2016 22:03:57</publishTime>
+    </File>
+    <File Include="Properties/PublishProfiles/_notes/dwsync.xml">
+      <publishTime>08/07/2016 22:04:03</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.js">
+      <publishTime>08/26/2016 19:13:49</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.min.js">
+      <publishTime>08/26/2016 19:13:49</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.js">
+      <publishTime>08/26/2016 19:13:49</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.min.js">
+      <publishTime>08/26/2016 19:13:49</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.min.map">
+      <publishTime>08/26/2016 19:13:49</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.js">
+      <publishTime>08/26/2016 19:13:51</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.min.js">
+      <publishTime>08/26/2016 19:13:51</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.js">
+      <publishTime>08/26/2016 19:13:51</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.min.js">
+      <publishTime>08/26/2016 19:13:51</publishTime>
+    </File>
+    <File Include="Scripts/Login.js">
+      <publishTime>07/24/2017 16:41:16</publishTime>
+    </File>
+    <File Include="Scripts/modernizr-2.6.2.js">
+      <publishTime>08/26/2016 19:13:50</publishTime>
+    </File>
+    <File Include="Scripts/respond.js">
+      <publishTime>07/16/2017 09:41:10</publishTime>
+    </File>
+    <File Include="Scripts/respond.min.js">
+      <publishTime>08/26/2016 19:13:51</publishTime>
+    </File>
+    <File Include="Scripts/_references.js">
+      <publishTime>07/20/2017 11:49:20</publishTime>
+    </File>
+    <File Include="video/1I.mp4">
+      <publishTime>07/08/2016 22:04:02</publishTime>
+    </File>
+    <File Include="Views/Home/About.cshtml">
+      <publishTime>08/26/2016 19:13:47</publishTime>
+    </File>
+    <File Include="Views/Home/Contact.cshtml">
+      <publishTime>08/26/2016 19:13:47</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>07/21/2017 07:16:42</publishTime>
+    </File>
+    <File Include="Views/QuizListes/Create.cshtml">
+      <publishTime>07/17/2017 22:32:34</publishTime>
+    </File>
+    <File Include="Views/QuizListes/Delete.cshtml">
+      <publishTime>07/15/2017 13:41:01</publishTime>
+    </File>
+    <File Include="Views/QuizListes/Details.cshtml">
+      <publishTime>07/24/2017 16:38:10</publishTime>
+    </File>
+    <File Include="Views/QuizListes/Edit.cshtml">
+      <publishTime>07/17/2017 08:20:03</publishTime>
+    </File>
+    <File Include="Views/QuizListes/Index.cshtml">
+      <publishTime>07/21/2017 07:12:11</publishTime>
+    </File>
+    <File Include="Views/Shared/Error.cshtml">
+      <publishTime>08/26/2016 19:13:47</publishTime>
+    </File>
+    <File Include="Views/Shared/_Indsaet_Karusel.cshtml">
+      <publishTime>07/16/2017 10:07:58</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>07/18/2017 15:57:12</publishTime>
+    </File>
+    <File Include="Views/sjantpics/Create.cshtml">
+      <publishTime>11/08/2016 19:15:36</publishTime>
+    </File>
+    <File Include="Views/sjantpics/Delete.cshtml">
+      <publishTime>11/08/2016 19:15:36</publishTime>
+    </File>
+    <File Include="Views/sjantpics/Details.cshtml">
+      <publishTime>11/08/2016 19:15:36</publishTime>
+    </File>
+    <File Include="Views/sjantpics/Edit.cshtml">
+      <publishTime>11/08/2016 19:15:37</publishTime>
+    </File>
+    <File Include="Views/sjantpics/Index.cshtml">
+      <publishTime>11/08/2016 19:15:37</publishTime>
+    </File>
+    <File Include="Views/Users/Create.cshtml">
+      <publishTime>07/19/2017 10:10:28</publishTime>
+    </File>
+    <File Include="Views/Users/Delete.cshtml">
+      <publishTime>07/19/2017 10:10:29</publishTime>
+    </File>
+    <File Include="Views/Users/Details.cshtml">
+      <publishTime>07/19/2017 10:10:29</publishTime>
+    </File>
+    <File Include="Views/Users/Edit.cshtml">
+      <publishTime>07/19/2017 10:10:30</publishTime>
+    </File>
+    <File Include="Views/Users/Index.cshtml">
+      <publishTime>07/19/2017 10:10:30</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>08/26/2016 19:13:47</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>08/26/2016 19:13:47</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>10/29/2017 16:18:54</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

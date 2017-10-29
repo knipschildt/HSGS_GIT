@@ -1,104 +1,102 @@
-﻿@model HsgsGsu.Models.QuizListe
+﻿@using HsgsGsu.Models;
+@model QuizSamlingUser
 
 @{
     ViewBag.Title = "Details";
 }
 <div class="container" style="padding-left:5px; padding-right:5px;">
-    <h3>@Html.DisplayFor(model => model.MobilTitel)</h3>
-    <hr />
+    <h3>FØRDAG @Model.Qliste.Førdag  Lektion: @Model.Qliste.Lektion</h3>
     <div class="row">
         <div class="col-md-6" style="padding-left:0px; padding-right:0px;">
             <div class="well" style="padding-left:7px; padding-right:7px;">
-
-                <div id="main">
-                    <div id="main_overlay_top_most">
-                        <img src="~/Content/images_quiz/@Model.Filnavn" alt="@Model.WebTitel" title="@Model.MobilTitel" class="btn-block" />
-                        <div id="main_overlay">
-                            <div id="main_overlay_top_text">FØRDAG @Model.Førdag</div>
-                            <div id="main_overlay_top_under_text">LEK @Model.Lektion</div>
+                <div class="panel panel-default" style="border: 1px solid">
+                    <div id="main">
+                        <div id="main_overlay_top_most">
+                            <img src="~/Content/images_quiz/@Model.Qliste.Filnavn" alt="@Model.Qliste.WebTitel" title="@Model.Qliste.MobilTitel" class="btn-block" />
+                            <div id="main_overlay">
+                                <div id="textInlayer" class="text-left">@Model.Qliste.MobilTitel</div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <p>@Model.Beskrivelse</p>
-                <p><a class="btn btn-success btn-block" href="http://www.kvistgaarden.com/index.php/da/">Start prøven &raquo;</a></p>
-
-
-            </div>
+                <div class="panel panel-body" style="border: 1px solid">
+                    @Model.Qliste.Beskrivelse
+                    <p></p>
+                    <p><a class="btn btn-success btn-block" href="test.dk">Start prøven &raquo;</a></p>
                 </div>
-                <div class="col-md-6">
-                    <div class="well" style="padding-left:7px; padding-right:7px;">
-                        <h5>Ranking score</h5>
-                        -
-                        -
-                        -
-                        -
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="well" style="padding-left:7px; padding-right:7px;padding-top:7px;">
+                <h3 style="text-align:center;margin-top:10px;">Ranking score</h3>
+
+                <a data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                    filter
+                </a>
+
+                <div class="panel panel-default collapse" id="collapseExample">
+
+                    <div class="row" style="margin:10px;">
+
+
+                        <div class="form-group">
+
+                            <select class="form-control" id="selHOLD">
+                                <option selected>Alle HOLD</option>
+                                @foreach (var it in ViewBag.query2)
+                                {
+                                    <option>@it</option>
+                                }
+                            </select>
+                        </div>
+                        <div class="form-group">
+
+                            <select class="form-control" id="selDEL">
+                                <option selected>Alle DEL</option>
+                                @foreach (var it in ViewBag.query)
+                                {
+                                    <option>@it</option>
+                                }
+                            </select>
+                        </div>
+                        <div class="pull-right"><a class="btn btn-success btn-sm" id="btn-soeg"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> SØG</a></div>
 
                     </div>
                 </div>
+
+                <input type="hidden" id="selKURSUS" value="@Model.Qliste.QuizId">
+                <div class="list-group" id="messenger">
+                    @{
+                        if (Model.QOListe.Count == 0)
+                        {
+                            <a href='#' class='list-group-item' style='padding:5px 5px 5px 10px;'><div class="alert alert-danger" role="alert">Endnu ingen gennemførte prøver</div></a>
+                        }
+                        else
+                        {
+                            int x = 0;
+                            foreach (var item in Model.QOListe)
+                            {
+
+                                x++;
+                                <a href="#" class="list-group-item" style="padding:5px 5px 5px 10px;">
+                                    <table>
+                                        <tr>
+                                            <td width="13%"><span style="font-weight:bold;">@x</span></td>
+                                            <td width="75%">@Html.DisplayFor(modelItem => item.Navn)</td>
+                                            <td align="right"><span class="badge badge-default">@Html.DisplayFor(modelItem => item.Score)</span></td>
+                                            <td width="12%" align="right">@Html.DisplayFor(modelItem => item.DEL)</td>
+
+                                        </tr>
+                                    </table>
+                                </a>
+                            }
+                        }
+                    }
+                </div>
+
             </div>
+
+        </div>
+    </div>
 </div>
 
-
-    @*<dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.MobilTitel)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.MobilTitel)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Beskrivelse)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Beskrivelse)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Kategori)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Kategori)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Førdag)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Førdag)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Lektion)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Lektion)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Oprettet)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Oprettet)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.AntalGange)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.AntalGange)
-        </dd>
-
-    </dl>
-</div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.QuizId }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>*@
