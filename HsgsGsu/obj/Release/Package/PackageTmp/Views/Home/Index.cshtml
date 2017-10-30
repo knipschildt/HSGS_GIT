@@ -1,0 +1,111 @@
+﻿@model IEnumerable<HsgsGsu.Models.Sjantpic>
+@{
+
+    ViewBag.Title = "Forside HSGS";
+}
+<br />
+<div class="container" style='width: 100%;'>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="row">
+                <div class="hidden-xs col-md-6">
+                    <div class="well" style="height:239px; padding-top:10px;">
+                        <div style="padding-bottom: 8px; padding-left:7px;">
+                            <img src="../Content/images/HSGS_DK.gif" alt="HSGS logo mini">
+                            <span style="padding-left:7px; font-size:medium; font-weight:bold; color:silver">Information.</span>
+                        </div>
+                        Denne side er primært til brug for sergent og officerselever ved Hærens sergentskole. Eleven skal bruge stabsnummer og udleveret password til login - hvorefter materialet er tilgængeligt. Såfremt andre ønsker adgang til siden, så kontakt <a href="mailto:hsgs-gsu-003@mil.dk">SSG Mikael Knipschildt</a>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                    <div class="well" style="padding-top:10px;">
+                        <div style="padding-bottom: 8px; padding-left:7px;">
+                            <img src="../Content/images/HSGS_DK.gif" alt="HSGS logo mini">
+                            <span style="padding-left:7px; font-size:medium; font-weight:bold; color:silver">Log in.</span>
+                        </div>
+                        <form role="form">
+
+                            <div class="form-group input-group ">
+
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+
+                                <input class="form-control" type="text" name='stabsnummer' placeholder="Indtast STABS nummer" required autofocus />
+
+                            </div>
+
+                            <div class="form-group input-group">
+
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+
+                                <input class="form-control" type="password" name='password' placeholder="Indtast password" required />
+
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" value="remember-me">Husk mit password
+                                </label>
+                            </div>
+                            <button class="btn btn-default btn-block" type="submit">Log ind</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="clearfix visible-md"></div>
+                <div class="col-md-12">
+                    <div class="well" style="padding-top:10px;">
+                        <div style="padding-bottom: 8px; padding-left:7px;">
+                            <img src="../Content/images/HSGS_DK.gif" alt="HSGS logo mini">
+                            <span style="padding-left:7px; font-size:medium; font-weight:bold; color:silver">"S´JANT" Chatten.</span>
+                        </div>
+                        @foreach (var item in Model)
+                        {                    <div class="panel panel-default">
+                            <div class="panel-heading">@Html.DisplayFor(modelItem => item.Overskrift)</div>
+                            <div id="main">
+                                <div id="main_overlay_top_most">
+                                    <img src="@Html.DisplayFor(modelItem => item.FileName)" alt="Pulpit rock" class="img-responsive center-block">
+                                    <div id="main_overlay">
+                                        <div id="main_overlay_top_text">@Html.DisplayFor(modelItem => item.Kategori)</div>
+                                        <div id="main_overlay_top_under_text">@Html.DisplayFor(modelItem => item.Beskrivelse)</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel-footer"><span class="glyphicon glyphicon-thumbs-up" style="font-size:1.3em;" aria-hidden="true"></span>&nbsp;&nbsp;<span class="glyphicon glyphicon-comment" style="font-size:1.3em;" aria-hidden="true"></span></div>
+                        </div>
+                        }
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="well" style="padding-top:10px;">
+                        <div style="padding-bottom: 8px; padding-left:7px;">
+                            <img src="../Content/images/HSGS_DK.gif" alt="HSGS logo mini">
+                            <span style="padding-left:7px; font-size:medium; font-weight:bold; color:silver">Lærifghhngsvideoer.</span>
+                        </div>
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading">Taktiske Læringsvideoer</div>
+                            <div><img src="../Content/images/1I.png" class="img-responsive center-block" alt="Cinque Terre"></div>
+                            <div class="panel-footer">Panel Footer</div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">Taktiske Læringsvideoer</div>
+                            <div><img src="../Content/images/1I.png" class="img-responsive center-block" alt="Cinque Terre"></div>
+                            <div class="panel-footer">Panel Footer</div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">Taktiske Læringsvideoer</div>
+                            <div><img src="../Content/images/1I.png" class="img-responsive center-block" alt="Cinque Terre"></div>
+                            <div class="panel-footer">Panel Footer</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

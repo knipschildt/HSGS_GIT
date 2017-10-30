@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
+﻿using System.Data;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
-using System.Web;
 using System.Web.Mvc;
 using HsgsGsu.Models;
+using System.Collections.Generic;
 
 namespace HsgsGsu.Controllers
 {
@@ -14,10 +12,155 @@ namespace HsgsGsu.Controllers
     {
         private GSUContext db = new GSUContext();
 
-        // GET: QuizListes
         public ActionResult Index()
         {
             return View(db.QuizLister.ToList());
+        }
+
+        [HttpPost]
+        public virtual JsonResult Details(QuizOrderList usr)
+        {
+            using (db = new GSUContext())
+            {
+                dynamic val = null;
+
+                if (usr.DEL != "Alle DEL" && usr.HOLD != "Alle HOLD")
+                {
+                    var val1 = from b in db.QuizOrderLister
+                         where (b.KursusID == usr.KursusID) && (b.HOLD == usr.HOLD) && (b.DEL == usr.DEL)
+                               orderby b.Score descending
+                               select new
+                          {
+                              KundeID = b.KursusID,
+                              DEL = b.DEL,
+                              HOLD = b.HOLD,
+                              Score = b.Score,
+                              Navn = b.Navn,
+                          };
+                    return Json(val1.ToList());
+                }
+
+                if (usr.DEL != "Alle DEL" && usr.HOLD == "Alle HOLD")
+                {
+                    var val2 = from b in db.QuizOrderLister
+                          where (b.DEL == usr.DEL) && (b.KursusID == usr.KursusID)
+                               orderby b.Score descending
+                               select new
+                          {
+                              KundeID = b.KursusID,
+                              DEL = b.DEL,
+                              HOLD = b.HOLD,
+                              Score = b.Score,
+                              Navn = b.Navn,
+                          };
+                    return Json(val2.ToList());
+                }
+
+                if (usr.DEL == "Alle DEL" && usr.HOLD != "Alle HOLD")
+                {
+                    var val3 = from b in db.QuizOrderLister
+                          where (b.HOLD == usr.HOLD) && (b.KursusID == usr.KursusID)
+                               orderby b.Score descending
+                               select new
+                          {
+                              KundeID = b.KursusID,
+                              DEL = b.DEL,
+                              HOLD = b.HOLD,
+                              Score = b.Score,
+                              Navn = b.Navn,
+                          };
+                    return Json(val3.ToList());
+                }
+
+                if (usr.DEL == "Alle DEL" && usr.HOLD == "Alle HOLD")
+                {
+                    var val4 = from b in db.QuizOrderLister
+                               where (b.KursusID == usr.KursusID)
+                               orderby b.Score descending
+                               select new
+                               {
+                                   KundeID = b.KursusID,
+                                   DEL = b.DEL,
+                                   HOLD = b.HOLD,
+                                   Score = b.Score,
+                                   Navn = b.Navn,
+                               };
+                    return Json(val4.ToList());
+                }
+                return Json(val);
+            }
+        }
+
+        [HttpPost]
+        public virtual JsonResult GetComboDEL(QuizOrderList usr)
+        {
+            using (db = new GSUContext())
+            {
+                dynamic val1 = null;
+                dynamic val2 = null;
+
+                val1 = (from b in db.QuizOrderLister
+                        where (b.KursusID == usr.KursusID)
+                        group b by b.HOLD
+                        into g
+                        select g.FirstOrDefault()).ToList();
+
+                if (usr.DEL == "Alle DEL" && usr.HOLD != "Alle HOLD")
+                {
+                    val2 = (from b in db.QuizOrderLister
+                            where (b.HOLD == usr.HOLD) && (b.KursusID == usr.KursusID)
+                            group b by b.DEL
+                            into g
+                            select g.FirstOrDefault()).ToList();
+                }
+                else if (usr.HOLD == "Alle HOLD" && usr.DEL == "Alle DEL")
+                {
+                    val2 = (from b in db.QuizOrderLister
+                            where (b.KursusID == usr.KursusID)
+                            group b by b.DEL
+                            into g
+                            select g.FirstOrDefault()).ToList();
+                }
+                else if (usr.DEL != "Alle DEL" && usr.HOLD == "Alle HOLD")
+                {
+                    val2 = (from b in db.QuizOrderLister
+                            where (b.KursusID == usr.KursusID)
+                            group b by b.DEL
+                            into g
+                            select g.FirstOrDefault()).ToList();
+                }
+
+                else
+                {
+                    var co = (from b in db.QuizOrderLister
+                              where (b.HOLD == usr.HOLD) && (b.KursusID == usr.KursusID)
+                              select b).Count();
+
+                    if (co > 0)
+                    {
+                        val2 = (from b in db.QuizOrderLister
+                                where (b.HOLD == usr.HOLD) && (b.KursusID == usr.KursusID)
+                                group b by b.DEL
+                            into g
+                                select g.FirstOrDefault()).ToList();
+                    }
+                    else
+                    {
+                        val2 = (from b in db.QuizOrderLister
+                                where (b.KursusID == usr.KursusID)
+                                group b by b.DEL
+                           into g
+                                select g.FirstOrDefault()).ToList();
+                    }
+
+
+                }
+                List<List<QuizOrderList>> list = new List<List<QuizOrderList>>();
+                list.Add(val1);
+                list.Add(val2);
+
+                return Json(list);
+            }
         }
 
         // GET: QuizListes/Details/5
@@ -27,12 +170,29 @@ namespace HsgsGsu.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
+
             QuizListe quizListe = db.QuizLister.Find(id);
+
             if (quizListe == null)
             {
                 return HttpNotFound();
             }
-            return View(quizListe);
+
+            QuizSamlingUser BCVM = new QuizSamlingUser();
+            BCVM.User = new User();
+            BCVM.Qliste = quizListe;
+            BCVM.QOListe = (from b in db.QuizOrderLister
+                            where b.KursusID == id
+                            orderby b.Score descending
+                            select b).ToList();
+
+            ViewBag.query = ((from s in db.QuizOrderLister
+                              where s.KursusID == id
+                              select s.DEL).Distinct()).ToList();
+            ViewBag.query2 = ((from s in db.QuizOrderLister
+                               where s.KursusID == id
+                               select s.HOLD).Distinct()).ToList();
+            return View(BCVM);
         }
 
         // GET: QuizListes/Create
@@ -42,8 +202,6 @@ namespace HsgsGsu.Controllers
         }
 
         // POST: QuizListes/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "QuizId,Titel,Beskrivelse,Kategori,Førdag,Lektion,Oprettet,AntalGange")] QuizListe quizListe)
@@ -74,8 +232,6 @@ namespace HsgsGsu.Controllers
         }
 
         // POST: QuizListes/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "QuizId,Titel,Beskrivelse,Kategori,Førdag,Lektion,Oprettet,AntalGange")] QuizListe quizListe)
@@ -125,3 +281,4 @@ namespace HsgsGsu.Controllers
         }
     }
 }
+

@@ -1,0 +1,80 @@
+﻿@model HsgsGsu.Models.QuizListe
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>QuizListe</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Titel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Titel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Beskrivelse)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Beskrivelse)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Kategori)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Kategori)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Førdag)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Førdag)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Lektion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Lektion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Oprettet)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Oprettet)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AntalGange)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AntalGange)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

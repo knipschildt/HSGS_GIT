@@ -1,0 +1,64 @@
+﻿@model HsgsGsu.Models.User
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>User</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MaId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fNavn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fNavn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.eNavn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.eNavn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Deling)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Deling)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Hold)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hold)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

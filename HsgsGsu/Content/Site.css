@@ -4,28 +4,14 @@
 	background-color: #e1e5cf;
 }
 
-
-
-/* Set padding to keep content from hitting the edges */
 .body-content {
 	padding-left: 15px;
 	padding-right: 15px;
 }
 
-/* Override the default bootstrap behavior where horizontal description lists 
-   will truncate terms that are too long to fit in the left column 
-*/
 .dl-horizontal dt {
 	white-space: normal;
 }
-
-/* Set width on the form input elements since they're 100% wide by default */
-/*input,
-select,
-textarea {
-	max-width: 280px;
-}*/
-
 
 .panel-heading,
 .panel-footer {
@@ -38,22 +24,12 @@ background-color: #fffff2 !important;
 	border-color: gray;
 }
 
-/* Pic overlay */
-@charset "utf-8";
-/* CSS Document */
-
 #main {
 width:100%;
 height:100%;
 border-width: 1px;
 z-index:5;	
 }
-
-
-
-/*#main_overlay:hover {	
-	top:70%;
-}*/
 
 #main_overlay_top_most {
 	cursor: pointer;
@@ -65,15 +41,17 @@ z-index:5;
 }
 
 #main_overlay_top_text {
-	color: #e1e5cf;
+	color: #e6fad0;
 	padding-left: 7px;
 	overflow: hidden;
+    align-self:center;
+
 }
 
-#main_overlay_top_under_text {
-	color: #e1e5cf;
-	padding: 2px 10px 10px 10px;
-	font-size:12px;
+#textInlayer {
+	color: #e6fad0;
+	font-size:large;
+    margin: 10px auto;
 }
 
 #main_overlay {
@@ -85,17 +63,13 @@ z-index:5;
 	z-index:1;
     padding: 2px 10px 10px 10px;
 	overflow: hidden;
-	/*-webkit-transition: top 2s;*/ /* For Safari 3.1 to 6.0 */
-	/*transition: top 2s;*/
    }
-
 
 /* --------------------------------------
    Carousel
    -------------------------------------- */
 
 #myCarousel {
-	margin-top: 0px;
 	background-color: #000000;
 }
 
@@ -107,56 +81,18 @@ z-index:5;
 		font-size: 22px;
 	}
 
-#myCarousel .item { height: 280px; }
-
-	#slide1 {
-		background: url('../Content/images/1_768x280.jpg') top center no-repeat;
-	}
-	
-	#slide2 {
-		background: url('../Content/images/2_768x280.jpg') top center no-repeat;
-	}
-	
-	#slide3 {
-		background: url('../Content/images/3_768x280.jpg') top center no-repeat;
-	}
-
-	#slide4 {
-		background: url('../Content/images/4_768x280.jpg') top center no-repeat;
-	}
-
-	#slide5 {
-		background: url('../Content/images/5_768x280.jpg') top center no-repeat;
-	}
-
-	#slide6 {
-		background: url('../Content/images/6_768x280.jpg') top center no-repeat;
-	}
-
-hr.style1 {
-	border-top: 1px solid #8c8b8b;
-	border-bottom: 1px solid #fff;
-}
-hr.style1:after {
-	content: '';
-	display: block;
-	margin-top: 2px;
-	border-top: 1px solid #8c8b8b;
-	border-bottom: 1px solid #fff;
-}
-
-
-/* --------------------------------------
-   Media Queries
-   -------------------------------------- */
-
-
 /* Portrait & landscape phone */
 @media (max-width: 470px) {
 
 	#myCarousel .item { height: 220px; }
 
- .col-md-1,
+    #textInlayer {
+	color: #e6fad0;
+	font-size:medium;
+    margin:2px auto;
+}
+
+  .col-md-1,
   .col-md-2,
   .col-md-3,
   .col-md-4,
@@ -203,17 +139,10 @@ hr.style1:after {
 		font-size: 18px;
 	}
 
-   /*#main_overlay {
-	top:70%;
-   }
-   #main_overlay:hover {	
-	top:20%;
-}*/
 	.rating{  
 		top:-15px;
    font-size:22px;
-   }
-	
+   }	
 }
 
 /* Landscape phone to portrait tablet */
